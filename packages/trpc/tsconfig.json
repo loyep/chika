@@ -1,4 +1,9 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["index.ts"]
+  "include": [
+    "src",
+    "index.ts",
+    "transformer.ts",
+    "node_modules/@chika/auth/next-auth.d.ts"
+  ]
 }

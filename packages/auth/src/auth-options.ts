@@ -33,7 +33,7 @@ export const authOptions: NextAuthOptions = {
         user: {
           ...session.user,
           id: user.id,
-          username: user.username,
+          username: (user as any).username,
         },
       };
     },

@@ -1,22 +1,5 @@
-import { PrismaClient } from "ioredis";
+export type { AppRouter } from "./src/router";
+export { appRouter } from "./src/router";
 
-declare global {
-  // allow global `var` declarations
-  // eslint-disable-next-line no-var
-  var prisma: PrismaClient | undefined;
-}
-
-export const prisma =
-  global.prisma ||
-  new PrismaClient({
-    log:
-      process.env.NODE_ENV === "development"
-        ? ["query", "error", "warn"]
-        : ["error"],
-  });
-
-export * from "@prisma/client";
-
-if (process.env.NODE_ENV !== "production") {
-  global.prisma = prisma;
-}
+export { createContext } from "./src/context";
+export type { Context } from "./src/context";

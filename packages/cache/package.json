@@ -6,9 +6,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
-    "with-env": "dotenv -e ../../.env --",
-    "db-push": "pnpm with-env prisma db push",
-    "db-generate": "pnpm with-env prisma generate"
+    "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
     "ioredis": "^5.0.0"

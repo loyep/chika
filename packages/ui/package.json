@@ -7,8 +7,8 @@
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
     "with-env": "dotenv -e ../../.env --",
-    "db-push": "pnpm with-env prisma db push",
-    "db-generate": "pnpm with-env prisma generate"
+    "db-push": "yarn with-env prisma db push",
+    "db-generate": "yarn with-env prisma generate"
   },
   "dependencies": {
     "ioredis": "^5.0.0"

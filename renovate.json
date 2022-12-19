@@ -7,7 +7,6 @@
   "extends": ["config:base", ":preserveSemverRanges"],
   "ignoreDeps": [
     "zx",
-    "pnpm",
     "node",
     "dite",
     "@dite/nest",

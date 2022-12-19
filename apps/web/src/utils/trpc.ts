@@ -2,8 +2,8 @@
 import { createTRPCNext } from "@trpc/next";
 import { httpBatchLink, loggerLink } from "@trpc/client";
 import { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
-import type { AppRouter } from "@chika/api";
-import { transformer } from "@chika/api/transformer";
+import type { AppRouter } from "@chika/trpc";
+import { transformer } from "@chika/trpc/transformer";
 
 const getBaseUrl = () => {
   if (typeof window !== "undefined") return ""; // browser should use relative url

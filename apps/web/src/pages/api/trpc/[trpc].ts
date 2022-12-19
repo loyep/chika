@@ -1,4 +1,4 @@
-import { appRouter, createContext } from "@chika/api";
+import { appRouter, createContext } from "@chika/trpc";
 import { createNextApiHandler } from "@trpc/server/adapters/next";
 
 // export API handler
