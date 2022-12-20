@@ -1,1 +1,1 @@
-module.exports = require("@chika/tailwind-config/postcss");
+module.exports = require('@chika/tailwind-config/postcss');

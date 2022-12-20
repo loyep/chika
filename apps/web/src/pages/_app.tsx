@@ -1,20 +1,23 @@
-// src/pages/_app.tsx
-import "../styles/globals.css";
-import { SessionProvider } from "next-auth/react";
-import type { Session } from "next-auth";
-import type { AppType } from "next/app";
+import { ConfigProvider } from 'antd';
+import 'antd/dist/reset.css';
+import type { Session } from 'next-auth';
+import { SessionProvider } from 'next-auth/react';
+import type { AppType } from 'next/app';
+import '../styles/globals.css';
 
-import { trpc } from "../utils/trpc";
+import { trpc } from '../utils/trpc';
 
-const MyApp: AppType<{ session: Session | null }> = ({
+const App: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
   return (
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+    <ConfigProvider>
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
+    </ConfigProvider>
   );
 };
 
-export default trpc.withTRPC(MyApp);
+export default trpc.withTRPC(App);

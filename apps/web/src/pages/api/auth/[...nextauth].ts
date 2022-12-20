@@ -1,5 +1,4 @@
-import NextAuth from "next-auth";
-
-import { authOptions } from "@chika/auth";
+import { authOptions } from '@chika/auth';
+import NextAuth from 'next-auth';
 
 export default NextAuth(authOptions);

@@ -3,20 +3,18 @@
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
  * This is especially useful for Docker builds.
  */
-!process.env.SKIP_ENV_VALIDATION && (await import("./src/env/server.mjs"));
+// !process.env.SKIP_ENV_VALIDATION && (await import("./src/env/server.mjs"));
 
-/** @type {import("next").NextConfig} */
-const config = {
+import tm from 'next-transpile-modules';
+
+const withTM = tm(['@chika/prisma', '@chika/trpc', '@chika/auth']);
+
+const config = withTM({
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    // Enables hot-reload and easy integration for local packages
-    transpilePackages: ["@chika/api", "@chika/auth", "@chika/prisma"],
+  compiler: {
+    styledComponents: true,
   },
-  // We already do linting on GH actions
-  eslint: {
-    ignoreDuringBuilds: !!process.env.CI,
-  },
-};
+});
 
 export default config;
