@@ -1,8 +1,14 @@
 import { ReactElement } from 'react';
+import Stats from '../../components/stats';
 import ConsoleLayout from '../../layouts/console';
 
 export default function Dashboard() {
-  return <div>Admin</div>;
+  return (
+    <div>
+      <Stats />
+      Admin
+    </div>
+  );
 }
 
 Dashboard.getLayout = function getLayout(page: ReactElement) {
