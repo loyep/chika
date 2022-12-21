@@ -20,8 +20,8 @@ export default class AppDocument extends Document {
       ...initialProps,
       styles: (
         <>
-          {initialProps.styles}
           <style dangerouslySetInnerHTML={{ __html: extractStyle(cache) }} />
+          {initialProps.styles}
         </>
       ),
     };

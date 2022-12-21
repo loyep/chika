@@ -103,7 +103,7 @@ export default function ConsoleLayout({ children }: { children: ReactNode }) {
   };
   return (
     <ConfigProvider>
-      <Layout className="min-h-screen">
+      <Layout style={{ minHeight: '100vh' }}>
         <Sider theme="light" className="bg-white">
           <div className="text-center py-4 text-2xl font-bold">Console</div>
           <Menu selectedKeys={selectedKeys} theme="light" items={menus} onSelect={onSelect} />
