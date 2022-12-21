@@ -109,7 +109,7 @@ export default function ConsoleLayout({ children }: { children: ReactNode }) {
           <Menu selectedKeys={selectedKeys} theme="light" items={menus} onSelect={onSelect} />
         </Sider>
         <Layout>
-          <Header>Header</Header>
+          {/* <Header>Header</Header> */}
           <Content>{children}</Content>
           <Footer>Footer</Footer>
         </Layout>
