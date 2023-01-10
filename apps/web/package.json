@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.2.0",
-    "@ant-design/icons": "^4.8.0",
+    "@ant-design/icons": "^5.0.0",
     "@chika/auth": "*",
     "@chika/prisma": "*",
     "@chika/tailwind-config": "*",
