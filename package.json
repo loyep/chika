@@ -24,7 +24,7 @@
     ]
   },
   "devDependencies": {
-    "@manypkg/cli": "^0.19.2",
+    "@manypkg/cli": "^0.20.0",
     "@types/node": "^17.0.45",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
